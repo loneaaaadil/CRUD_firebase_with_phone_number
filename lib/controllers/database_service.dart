@@ -1,8 +1,5 @@
-import 'dart:ffi';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:crud_firebase/model/item.dart';
-import 'package:get/get.dart';
 
 const String TODO_COLLECTON_REF = "items";
 

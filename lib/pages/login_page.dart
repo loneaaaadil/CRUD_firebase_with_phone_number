@@ -1,6 +1,6 @@
+import 'package:crud_firebase/constants/constants.dart';
 import 'package:crud_firebase/controllers/auth_service.dart';
 import 'package:flutter/material.dart';
-import 'package:get/instance_manager.dart';
 import 'package:get/route_manager.dart';
 
 import 'verify_page.dart';
@@ -24,7 +24,7 @@ class _LoginPageState extends State<LoginPage> {
         const Padding(
           padding: EdgeInsets.only(left: 40),
           child: Text(
-            'Continue with Phone',
+            Constants.CONTINUE_PHONE_NUMBER,
             style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
           ),
         ),
@@ -34,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
             controller: phoneController,
             decoration: const InputDecoration(
               prefixText: "+91",
-              labelText: "Mobile Number",
+              labelText: Constants.MOBILE_NUMBER,
               prefixIcon: Icon(Icons.phone),
               border: OutlineInputBorder(),
             ),
@@ -49,12 +49,11 @@ class _LoginPageState extends State<LoginPage> {
                   errorStep: () => ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(
                           content: Text(
-                            'Error in sending OTP',
+                            Constants.ERROR_SENDING_OTP,
                           ),
                         ),
                       ),
                   nextStep: () {
-                    print('next page');
                     Get.to(const VerifyPage());
                   });
             },
@@ -67,7 +66,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               child: const Center(
                 child: Text(
-                  'CONTINUE',
+                  Constants.CONTINUE,
                   style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w500,

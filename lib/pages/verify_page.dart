@@ -1,3 +1,4 @@
+import 'package:crud_firebase/constants/constants.dart';
 import 'package:crud_firebase/controllers/auth_service.dart';
 import 'package:crud_firebase/pages/home_page.dart';
 import 'package:flutter/material.dart';
@@ -24,14 +25,14 @@ class _VerifyPageState extends State<VerifyPage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Text(
-              "Verify your phone",
+              Constants.VERIFY_PHONE,
               style: TextStyle(fontWeight: FontWeight.w500, fontSize: 24),
             ),
             const Gap(20),
             const Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                'Enter code',
+                Constants.ENTER_CODE,
                 style: TextStyle(color: Color(0xff6750a4)),
               ),
             ),
@@ -50,7 +51,7 @@ class _VerifyPageState extends State<VerifyPage> {
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
                         content: Text(
-                          'Error in sending OTP',
+                          Constants.ERROR_SENDING_OTP,
                         ),
                       ),
                     );
@@ -66,7 +67,7 @@ class _VerifyPageState extends State<VerifyPage> {
                   borderRadius: BorderRadius.circular(100),
                 ),
                 child: const Text(
-                  'VERIFY',
+                  Constants.VERIFY,
                   style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w500,
